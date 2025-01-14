@@ -1,3 +1,4 @@
+#! /bin/bash
 FROM       centos
 COPY       mongo.repo mysql.repo  /etc/yum.repos.d/
 RUN        yum install git mongodb-org mysql -y
