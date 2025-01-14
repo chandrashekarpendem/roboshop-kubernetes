@@ -1,4 +1,4 @@
-FROM       centos:stream8
+FROM       centos
 COPY       mongo.repo mysql.repo  /etc/yum.repos.d/
 RUN        yum install git mongodb-org mysql -y
 COPY       run.sh /
