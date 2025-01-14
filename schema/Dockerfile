@@ -1,5 +1,5 @@
-FROM       dokken/centos-8
+FROM       centos:stream8
 COPY       mongo.repo mysql.repo  /etc/yum.repos.d/
-RUN        dnf install  git mongodb-org mysql -y
+RUN        yum install git mongodb-org mysql -y
 COPY       run.sh /
 ENTRYPOINT [ "bash", "/run.sh" ]
